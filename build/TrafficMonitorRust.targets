@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TrafficMonitorRustRoot>$([MSBuild]::NormalizeDirectory('$(MSBuildThisFileDirectory)..'))</TrafficMonitorRustRoot>
+    <TrafficMonitorCargo Condition="'$(TrafficMonitorCargo)' == ''">cargo</TrafficMonitorCargo>
+    <TrafficMonitorRustTarget Condition="'$(Platform)' == 'x64'">x86_64-pc-windows-msvc</TrafficMonitorRustTarget>
+    <TrafficMonitorRustTarget Condition="'$(Platform)' == 'Win32'">i686-pc-windows-msvc</TrafficMonitorRustTarget>
+    <TrafficMonitorRustTarget Condition="'$(Platform)' == 'ARM64EC'">arm64ec-pc-windows-msvc</TrafficMonitorRustTarget>
+    <TrafficMonitorRustProfile Condition="'$(UseDebugLibraries)' == 'true'">dev</TrafficMonitorRustProfile>
+    <TrafficMonitorRustProfile Condition="'$(TrafficMonitorRustProfile)' == ''">release</TrafficMonitorRustProfile>
+    <TrafficMonitorRustProfileDir Condition="'$(TrafficMonitorRustProfile)' == 'dev'">debug</TrafficMonitorRustProfileDir>
+    <TrafficMonitorRustProfileDir Condition="'$(TrafficMonitorRustProfileDir)' == ''">release</TrafficMonitorRustProfileDir>
+    <TrafficMonitorRustOutput>$(TrafficMonitorRustRoot)target\$(TrafficMonitorRustTarget)\$(TrafficMonitorRustProfileDir)</TrafficMonitorRustOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>$(TrafficMonitorRustOutput)\traffic_monitor_core.dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <TrafficMonitorRustSource Include="$(TrafficMonitorRustRoot)rust\traffic-monitor-core\src\**\*.rs" />
+    <CustomBuild Include="$(TrafficMonitorRustRoot)Cargo.toml">
+      <Message>Building Rust monitoring core ($(TrafficMonitorRustTarget), $(TrafficMonitorRustProfile))</Message>
+      <Command>powershell.exe -NoProfile -ExecutionPolicy Bypass -File &quot;$(TrafficMonitorRustRoot)scripts\build-rust-core.ps1&quot; -Cargo &quot;$(TrafficMonitorCargo)&quot; -Target $(TrafficMonitorRustTarget) -Profile $(TrafficMonitorRustProfile)</Command>
+      <AdditionalInputs>$(TrafficMonitorRustRoot)Cargo.lock;$(TrafficMonitorRustRoot)rust\traffic-monitor-core\Cargo.toml;$(TrafficMonitorRustRoot)scripts\build-rust-core.ps1;@(TrafficMonitorRustSource);$(MSBuildThisFileFullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Outputs>$(TrafficMonitorRustOutput)\traffic_monitor_core.dll;$(TrafficMonitorRustOutput)\traffic_monitor_core.dll.lib;%(Outputs)</Outputs>
+      <LinkObjects>false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <Target Name="ValidateTrafficMonitorRustTarget" BeforeTargets="PrepareForBuild" Condition="'$(DesignTimeBuild)' != 'true'">
+    <Error Condition="'$(TrafficMonitorRustTarget)' == ''" Text="Unsupported Rust core platform: $(Platform). Expected x64, Win32 or ARM64EC." />
+  </Target>
+  <Target Name="CopyTrafficMonitorRustCore" AfterTargets="Build" Condition="'$(DesignTimeBuild)' != 'true'">
+    <Copy SourceFiles="$(TrafficMonitorRustOutput)\traffic_monitor_core.dll" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+    <ItemGroup>
+      <FileWrites Include="$(OutDir)traffic_monitor_core.dll" />
+    </ItemGroup>
+  </Target>
+</Project>

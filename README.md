@@ -9,7 +9,13 @@
 
 # TrafficMonitor 简介
 
+本 fork 的 Rust 重构源码位于 [`refactor/rust-migration-public`](https://github.com/Ive4/TrafficMonitor/tree/refactor/rust-migration-public)。构建说明见 [Rust 迁移文档](docs/RUST_MIGRATION.md)，验证范围与发布说明见 [PUBLICATION.md](docs/rust-migration/PUBLICATION.md)。下方保留原项目介绍和上游发行链接。
+
 Traffic Monitor是一款用于Windows平台的网速监控悬浮窗软件，可以显示当前网速、CPU及内存利用率，支持嵌入到任务栏显示，支持更换皮肤、历史流量统计等功能。
+
+本分支已切换为独立 **Rust 桌面程序**，支持 **Windows 10/11**，默认构建和发布不再依赖 MFC 主程序。运行 `./scripts/build-rust-release.ps1 -Architecture x64` 后启动 `Bin/Rust/x64/TrafficMonitor.exe`；x86 使用 `-Architecture x86`。
+
+完整功能映射、验证记录和运行命令见 [Rust 改造与验收](./docs/RUST_MIGRATION.md)。本次修改尚未发布到上游下载页；下文原版资料和链接保留作功能与使用参考。
 
 # 相关链接：
 

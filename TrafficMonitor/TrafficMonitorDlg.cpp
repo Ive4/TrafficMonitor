@@ -18,6 +18,7 @@
 #include "WineTaskbarDlg.h"
 #include "TaskbarHelper.h"
 #include "SkinManager.h"
+#include "TrafficMonitorCore.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -1246,37 +1247,21 @@ void CTrafficMonitorDlg::DoMonitorAcquisition()
         }
     }
 
-    unsigned __int64 cur_in_speed{}, cur_out_speed{};       //本次监控时间间隔内的上传和下载速度
-
-    //如果发送和接收的字节数为0或上次发送和接收的字节数为0或当前连接已改变时，网速无效
-    if ((m_in_bytes == 0 && m_out_bytes == 0) || (m_last_in_bytes == 0 && m_last_out_bytes == 0) || m_connection_change_flag
-        || m_last_in_bytes > m_in_bytes || m_last_out_bytes > m_out_bytes)
-    {
-        cur_in_speed = 0;
-        cur_out_speed = 0;
-    }
-    else
-    {
-        cur_in_speed = m_in_bytes - m_last_in_bytes;
-        cur_out_speed = m_out_bytes - m_last_out_bytes;
-    }
-    ////如果大于1GB/s，说明可能产生了异常，网速无效
-    //if (cur_in_speed > 1073741824)
-    //  cur_in_speed = 0;
-    //if (cur_out_speed > 1073741824)
-    //  cur_out_speed = 0;
-
     //计算两次获取网速的时间间隔
     static ULONGLONG last_net_speed_time = 0;
     ULONGLONG net_speed_time = CCommon::GetCurrentTimeSinceEpochMilliseconds();
-    int time_span = theApp.m_general_data.monitor_time_span;
+    int64_t time_span = theApp.m_general_data.monitor_time_span;
     if (last_net_speed_time != 0)
-        time_span = static_cast<int>(net_speed_time - last_net_speed_time);
+        time_span = static_cast<int64_t>(net_speed_time) - static_cast<int64_t>(last_net_speed_time);
     last_net_speed_time = net_speed_time;
 
-    //将当前监控时间间隔的流量转换成每秒时间间隔内的流量
-    theApp.m_in_speed = static_cast<unsigned __int64>(cur_in_speed * 1000 / time_span);
-    theApp.m_out_speed = static_cast<unsigned __int64>(cur_out_speed * 1000 / time_span);
+    const TmNetworkSample network_sample = tm_calculate_network_sample(
+        m_in_bytes, m_out_bytes, m_last_in_bytes, m_last_out_bytes,
+        time_span, m_connection_change_flag ? 1u : 0u);
+    const unsigned __int64 cur_in_speed = network_sample.received_delta;
+    const unsigned __int64 cur_out_speed = network_sample.sent_delta;
+    theApp.m_in_speed = network_sample.receive_bytes_per_second;
+    theApp.m_out_speed = network_sample.send_bytes_per_second;
 
     m_connection_change_flag = false;    //清除连接发生变化的标志
 

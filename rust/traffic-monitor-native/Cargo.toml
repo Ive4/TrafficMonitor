@@ -1,0 +1,31 @@
+[package]
+name = "traffic-monitor-native"
+version = "1.86.0"
+edition.workspace = true
+rust-version.workspace = true
+license-file.workspace = true
+publish = false
+
+[[bin]]
+name = "TrafficMonitor"
+path = "src/main.rs"
+
+[dependencies]
+traffic-monitor-core = { path = "../traffic-monitor-core" }
+traffic-monitor-windows = { path = "../traffic-monitor-windows" }
+traffic-monitor-history = { path = "../traffic-monitor-history" }
+traffic-monitor-shell = { path = "../traffic-monitor-shell" }
+traffic-monitor-config = { path = "../traffic-monitor-config" }
+traffic-monitor-desktop-ui = { path = "../traffic-monitor-desktop-ui" }
+traffic-monitor-plugins = { path = "../traffic-monitor-plugins" }
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { workspace = true, features = [
+    "Win32_Foundation", "Win32_System_SystemInformation", "Win32_System_Threading",
+    "Win32_Storage_FileSystem", "Win32_UI_WindowsAndMessaging", "Win32_System_LibraryLoader",
+    "Win32_Security",
+    "Win32_System_Diagnostics_Debug", "Win32_System_Kernel", "Win32_System_Recovery",
+    "Win32_System_Memory",
+    "Win32_Globalization",
+    "Win32_Graphics_Gdi",
+] }

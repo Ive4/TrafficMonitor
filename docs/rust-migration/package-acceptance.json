@@ -1,0 +1,108 @@
+{
+  "packaged_at_utc": "2026-10-27T09:09:33.1551282Z",
+  "branch": "refactor/rust-migration",
+  "head": "930f17533d6098989ebad62f210aa97d75ef174b",
+  "source_changes_committed": false,
+  "fix": "Use matching UTF-16 declaration/LE BOM file for schtasks XML import; decode UTF-16, valid UTF-8 and OEM diagnostics without garbling Chinese.",
+  "packages": [
+    {
+      "architecture": "x64",
+      "version": "1.86.0",
+      "archive": "Bin\\Rust\\TrafficMonitor-Rust-1.86.0-x64-20261027-170926.zip",
+      "bytes": 1738612,
+      "sha256": "B36516AE718A22B548FC43F00E50C53D5476138D63F75AEBE48CD575385C4EA6",
+      "executable": "Bin\\Rust\\x64\\TrafficMonitor.exe",
+      "executable_sha256": "287E99F2E7FBBCF9FB79637947DCCCB0D0894A545699606C23F5D9F6C0A158CD",
+      "files": 151,
+      "skins": 15,
+      "languages": 18,
+      "third_party_packages": 18,
+      "workspace_tests": {
+        "failed": 0,
+        "passed": 267,
+        "default_ignored": 14
+      },
+      "explicit_task_scheduler_tests": {
+        "failed": 0,
+        "import_fixture_always_disabled": true,
+        "passed": 2,
+        "action_executed": false
+      },
+      "fmt": "passed",
+      "clippy_workspace_all_targets_deny_warnings": "passed",
+      "archive_round_trip_all_file_hashes": "passed",
+      "extracted_executable_sampling_and_history": "passed",
+      "build_log": "target/scheduler-final-x64.log",
+      "smoke_log": "target\\scheduler-package-20261027-170926\\smoke-x64.log"
+    },
+    {
+      "architecture": "x86",
+      "version": "1.86.0",
+      "archive": "Bin\\Rust\\TrafficMonitor-Rust-1.86.0-x86-20261027-170926.zip",
+      "bytes": 1699070,
+      "sha256": "AE533285A1E8A9E141D6025888FAE9F1B92EB6AA478FA41BB4A88A03FB9D9E7B",
+      "executable": "Bin\\Rust\\x86\\TrafficMonitor.exe",
+      "executable_sha256": "135D843579F9614F840C852ECAB2EE4C2D756109ABD780C97F5A9552B475CC36",
+      "files": 151,
+      "skins": 15,
+      "languages": 18,
+      "third_party_packages": 18,
+      "workspace_tests": {
+        "failed": 0,
+        "passed": 267,
+        "default_ignored": 14
+      },
+      "explicit_task_scheduler_tests": {
+        "failed": 0,
+        "import_fixture_always_disabled": true,
+        "passed": 2,
+        "action_executed": false
+      },
+      "fmt": "passed",
+      "clippy_workspace_all_targets_deny_warnings": "passed",
+      "archive_round_trip_all_file_hashes": "passed",
+      "extracted_executable_sampling_and_history": "passed",
+      "build_log": "target/scheduler-final-x86.log",
+      "smoke_log": "target\\scheduler-package-20261027-170926\\smoke-x86.log"
+    }
+  ],
+  "regression_red_log": "target/task-scheduler-red.log",
+  "regression_green_logs": [
+    "target/task-scheduler-green-x64.log",
+    "target/task-scheduler-green-x86.log"
+  ],
+  "encoding_comparison": "target/task-scheduler-diagnosis/results.json",
+  "nested_folder_fixture": "target/task-scheduler-diagnosis/nested-folder-result.json",
+  "principal_normalization": "target/task-scheduler-diagnosis/principal-result.json",
+  "arm64ec_workspace_all_targets_check": "passed",
+  "arm64ec_log": "target/scheduler-arm64ec-check.log",
+  "live_repair": {
+    "at_utc": "2026-10-27T09:07:26.8724982Z",
+    "result": "Startup task created and verified by SID; duplicate Run entry removed",
+    "task_path": "\\TrafficMonitor\\Autorun for <current-user>",
+    "enabled": true,
+    "command": "<install-dir>\\TrafficMonitor.exe",
+    "reported_principal": "<current-user>",
+    "principal_sid": "<current-user-sid>",
+    "logon_type": 3,
+    "run_level": 1,
+    "trigger_type": 9,
+    "trigger_user_sid": "<current-user-sid>",
+    "delay": "PT3S",
+    "registry_value_removed": true,
+    "backup": "target\\task-scheduler-repair\\20261027-170726-695\\before.json",
+    "running_process_preserved": true,
+    "task_action_manually_executed": false,
+    "real_logon_verified": false
+  },
+  "live_repair_receipt": "target\\task-scheduler-repair\\20261027-170726-695\\after.json",
+  "notes": [
+    "Automated import creates only unique disabled fixture tasks and deletes them without running their action.",
+    "The live requested Task Scheduler startup was separately registered after backup and verified by SID; only its exact matching Run value was removed.",
+    "The first live repair rejected a normalized short username, rolled back its task and preserved Run; SID normalization then verified the same account.",
+    "Actual creation/import was tested from the current elevated Windows session; standard-user creation and real logon execution are not verified.",
+    "The installed running executable was preserved; the fixed executable is in the new archives."
+  ],
+  "record_scope": "Historical local validation snapshot; machine identifiers generalized for publication. Raw local logs and repair backups are excluded from Git.",
+  "publication_branch": "refactor/rust-migration-public"
+}

@@ -1,0 +1,17 @@
+[package]
+name = "traffic-monitor-cli"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+license-file.workspace = true
+publish = false
+
+[[bin]]
+name = "traffic-monitor"
+path = "src/main.rs"
+
+[dependencies]
+traffic-monitor-core = { path = "../traffic-monitor-core" }
+traffic-monitor-windows = { path = "../traffic-monitor-windows" }
+traffic-monitor-history = { path = "../traffic-monitor-history" }
+traffic-monitor-shell = { path = "../traffic-monitor-shell" }

@@ -771,6 +771,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\PluginInterface.h" />
+    <ClInclude Include="..\include\TrafficMonitorCore.h" />
     <ClInclude Include="AboutDlg.h" />
     <ClInclude Include="AdapterCommon.h" />
     <ClInclude Include="AppAlreadyRuningDlg.h" />
@@ -1040,6 +1041,7 @@
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\build\TrafficMonitorRust.targets" />
   </ImportGroup>
   <ProjectExtensions>
     <VisualStudio>

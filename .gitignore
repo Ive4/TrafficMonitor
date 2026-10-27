@@ -300,3 +300,7 @@ __pycache__/
 !/TrafficMonitor/language/*.ini
 *.diagsession
 enc_temp*
+
+# Rust workspace build artifacts
+/target/
+/Bin/Rust/

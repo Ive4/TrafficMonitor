@@ -1,0 +1,754 @@
+{
+  "format_version": 1,
+  "branch": "refactor/rust-migration",
+  "base_commit": "930f175",
+  "minimum_windows": "Windows 10",
+  "projects": [
+    "TrafficMonitor/TrafficMonitor.vcxproj",
+    "OpenHardwareMonitorApi/OpenHardwareMonitorApi.vcxproj",
+    "PluginDemo/PluginDemo.vcxproj"
+  ],
+  "compilation_unit_count": 105,
+  "units": [
+    {
+      "project": "OpenHardwareMonitorApi/OpenHardwareMonitorApi.vcxproj",
+      "source": "OpenHardwareMonitorApi/OpenHardwareMonitorImp.cpp",
+      "tasks": [
+        "RM-06"
+      ]
+    },
+    {
+      "project": "OpenHardwareMonitorApi/OpenHardwareMonitorApi.vcxproj",
+      "source": "OpenHardwareMonitorApi/Stdafx.cpp",
+      "tasks": [
+        "RM-06"
+      ]
+    },
+    {
+      "project": "OpenHardwareMonitorApi/OpenHardwareMonitorApi.vcxproj",
+      "source": "OpenHardwareMonitorApi/UpdateVisitor.cpp",
+      "tasks": [
+        "RM-06"
+      ]
+    },
+    {
+      "project": "PluginDemo/PluginDemo.vcxproj",
+      "source": "PluginDemo/CustomDrawItem.cpp",
+      "tasks": [
+        "RM-17"
+      ]
+    },
+    {
+      "project": "PluginDemo/PluginDemo.vcxproj",
+      "source": "PluginDemo/CustomDrawItem2.cpp",
+      "tasks": [
+        "RM-17"
+      ]
+    },
+    {
+      "project": "PluginDemo/PluginDemo.vcxproj",
+      "source": "PluginDemo/DataManager.cpp",
+      "tasks": [
+        "RM-17"
+      ]
+    },
+    {
+      "project": "PluginDemo/PluginDemo.vcxproj",
+      "source": "PluginDemo/OptionsDlg.cpp",
+      "tasks": [
+        "RM-17"
+      ]
+    },
+    {
+      "project": "PluginDemo/PluginDemo.vcxproj",
+      "source": "PluginDemo/pch.cpp",
+      "tasks": [
+        "RM-17"
+      ]
+    },
+    {
+      "project": "PluginDemo/PluginDemo.vcxproj",
+      "source": "PluginDemo/PluginDemo.cpp",
+      "tasks": [
+        "RM-17"
+      ]
+    },
+    {
+      "project": "PluginDemo/PluginDemo.vcxproj",
+      "source": "PluginDemo/PluginSystemDate.cpp",
+      "tasks": [
+        "RM-17"
+      ]
+    },
+    {
+      "project": "PluginDemo/PluginDemo.vcxproj",
+      "source": "PluginDemo/PluginSystemTime.cpp",
+      "tasks": [
+        "RM-17"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/AboutDlg.cpp",
+      "tasks": [
+        "RM-25"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/AdapterCommon.cpp",
+      "tasks": [
+        "RM-03"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/AppAlreadyRuningDlg.cpp",
+      "tasks": [
+        "RM-15"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/auto_start_helper.cpp",
+      "tasks": [
+        "RM-19"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/BaseDialog.cpp",
+      "tasks": [
+        "RM-23"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/CalendarHelper.cpp",
+      "tasks": [
+        "RM-08"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/CAutoAdaptSettingsDlg.cpp",
+      "tasks": [
+        "RM-16"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/ClassicalTaskbarDlg.cpp",
+      "tasks": [
+        "RM-13"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/CMFCColorDialogEx.cpp",
+      "tasks": [
+        "RM-23"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/ColorSettingListCtrl.cpp",
+      "tasks": [
+        "RM-23"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/ColorStatic.cpp",
+      "tasks": [
+        "RM-23"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/ComboBox2.cpp",
+      "tasks": [
+        "RM-23"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/Common.cpp",
+      "tasks": [
+        "RM-24"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/CommonData.cpp",
+      "tasks": [
+        "RM-07",
+        "RM-09",
+        "RM-18"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/crashtool.cpp",
+      "tasks": [
+        "RM-22"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/CSkinPreviewView.cpp",
+      "tasks": [
+        "RM-10"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/CTabCtrlEx.cpp",
+      "tasks": [
+        "RM-23"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/CVariant.cpp",
+      "tasks": [
+        "RM-11"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/D2D1Support.cpp",
+      "tasks": [
+        "RM-11"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/D3D10Support1.cpp",
+      "tasks": [
+        "RM-11"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/DCompositionSupport.cpp",
+      "tasks": [
+        "RM-11"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/DisplayItem.cpp",
+      "tasks": [
+        "RM-18"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/DisplayTextSettingDlg.cpp",
+      "tasks": [
+        "RM-16"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/DllFunctions.cpp",
+      "tasks": [
+        "RM-24"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/DrawCommon.cpp",
+      "tasks": [
+        "RM-11"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/DrawCommonEx.cpp",
+      "tasks": [
+        "RM-11"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/DrawCommonFactory.cpp",
+      "tasks": [
+        "RM-11"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/DrawCommonHelper.cpp",
+      "tasks": [
+        "RM-11"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/DrawTextManager.cpp",
+      "tasks": [
+        "RM-11"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/Dxgi1Support2.cpp",
+      "tasks": [
+        "RM-11"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/FileDialogEx.cpp",
+      "tasks": [
+        "RM-23"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/FilePathHelper.cpp",
+      "tasks": [
+        "RM-24"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/GeneralSettingsDlg.cpp",
+      "tasks": [
+        "RM-16"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/HistoryTrafficCalendarDlg.cpp",
+      "tasks": [
+        "RM-08"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/HistoryTrafficDlg.cpp",
+      "tasks": [
+        "RM-08"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/HistoryTrafficFile.cpp",
+      "tasks": [
+        "RM-07"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/HistoryTrafficListCtrl.cpp",
+      "tasks": [
+        "RM-08"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/HistoryTrafficListDlg.cpp",
+      "tasks": [
+        "RM-08"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/HResultException.cpp",
+      "tasks": [
+        "RM-11"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/IconSelectDlg.cpp",
+      "tasks": [
+        "RM-15"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/IDrawCommon.cpp",
+      "tasks": [
+        "RM-11"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/Image2DEffect.cpp",
+      "tasks": [
+        "RM-11"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/IniHelper.cpp",
+      "tasks": [
+        "RM-09"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/LinkStatic.cpp",
+      "tasks": [
+        "RM-23"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/ListCtrlEx.cpp",
+      "tasks": [
+        "RM-23"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/MainWndColorDlg.cpp",
+      "tasks": [
+        "RM-16"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/MainWndSettingsDlg.cpp",
+      "tasks": [
+        "RM-16"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/MessageDlg.cpp",
+      "tasks": [
+        "RM-22"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/NetworkInfoDlg.cpp",
+      "tasks": [
+        "RM-03"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/OptionsDlg.cpp",
+      "tasks": [
+        "RM-16"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/PdhHardwareQuery/CpuFreq.cpp",
+      "tasks": [
+        "RM-04"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/PdhHardwareQuery/CPUUsage.cpp",
+      "tasks": [
+        "RM-04"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/PdhHardwareQuery/DiskUsage.cpp",
+      "tasks": [
+        "RM-05"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/PdhHardwareQuery/GpuUsage.cpp",
+      "tasks": [
+        "RM-05"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/PdhHardwareQuery/PdhQuery.cpp",
+      "tasks": [
+        "RM-05"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/PictureStatic.cpp",
+      "tasks": [
+        "RM-23"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/PluginInfoDlg.cpp",
+      "tasks": [
+        "RM-17"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/PluginManager.cpp",
+      "tasks": [
+        "RM-17"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/PluginManagerDlg.cpp",
+      "tasks": [
+        "RM-17"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/PluginUpdateHelper.cpp",
+      "tasks": [
+        "RM-21"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/SelectConnectionsDlg.cpp",
+      "tasks": [
+        "RM-03"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/SetItemOrderDlg.cpp",
+      "tasks": [
+        "RM-16"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/SettingsHelper.cpp",
+      "tasks": [
+        "RM-09"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/SimpleXML.cpp",
+      "tasks": [
+        "RM-10"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/SkinAutoAdaptSettingDlg.cpp",
+      "tasks": [
+        "RM-16"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/SkinDlg.cpp",
+      "tasks": [
+        "RM-10"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/SkinFile.cpp",
+      "tasks": [
+        "RM-10"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/SkinManager.cpp",
+      "tasks": [
+        "RM-10"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/SpinEdit.cpp",
+      "tasks": [
+        "RM-23"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/StaticEx.cpp",
+      "tasks": [
+        "RM-23"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/stdafx.cpp",
+      "tasks": [
+        "RM-01"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/StrTable.cpp",
+      "tasks": [
+        "RM-20"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/SupportedRenderEnums.cpp",
+      "tasks": [
+        "RM-11"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/TabDlg.cpp",
+      "tasks": [
+        "RM-23"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/TaskbarColorDlg.cpp",
+      "tasks": [
+        "RM-14"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/TaskbarDefaultStyle.cpp",
+      "tasks": [
+        "RM-14"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/TaskBarDlg.cpp",
+      "tasks": [
+        "RM-13"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/TaskBarDlgDrawCommon.cpp",
+      "tasks": [
+        "RM-11"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/TaskbarHelper.cpp",
+      "tasks": [
+        "RM-13"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/TaskbarItemOrderHelper.cpp",
+      "tasks": [
+        "RM-14"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/TaskBarSettingsDlg.cpp",
+      "tasks": [
+        "RM-14"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/Test.cpp",
+      "tasks": [
+        "RM-26"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/tinyxml2/tinyxml2.cpp",
+      "tasks": [
+        "RM-10"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/TinyXml2Helper.cpp",
+      "tasks": [
+        "RM-10"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/TrafficMonitor.cpp",
+      "tasks": [
+        "RM-19"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/TrafficMonitorDlg.cpp",
+      "tasks": [
+        "RM-02",
+        "RM-12",
+        "RM-15",
+        "RM-19"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/UpdateHelper.cpp",
+      "tasks": [
+        "RM-21"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/WIC.cpp",
+      "tasks": [
+        "RM-11"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/Win11TaskbarDlg.cpp",
+      "tasks": [
+        "RM-13"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/Win11TaskbarSettingDlg.cpp",
+      "tasks": [
+        "RM-14"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/WindowsSettingHelper.cpp",
+      "tasks": [
+        "RM-24"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/WindowsWebExperienceDetector.cpp",
+      "tasks": [
+        "RM-24"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/WineTaskbarDlg.cpp",
+      "tasks": [
+        "RM-13"
+      ]
+    },
+    {
+      "project": "TrafficMonitor/TrafficMonitor.vcxproj",
+      "source": "TrafficMonitor/WinVersionHelper.cpp",
+      "tasks": [
+        "RM-24"
+      ]
+    }
+  ]
+}

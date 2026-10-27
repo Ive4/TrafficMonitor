@@ -1,0 +1,80 @@
+{
+  "follow_up_acceptance": "docs/rust-migration/task-scheduler-acceptance.json",
+  "packaged_at_utc": "2026-10-27T08:04:52.3225471Z",
+  "branch": "refactor/rust-migration",
+  "head": "930f17533d6098989ebad62f210aa97d75ef174b",
+  "source_changes_committed": false,
+  "fix": "Recognize legacy/Rust TrafficMonitor product identity for explicit startup path migration; preserve foreign entries and reject changed snapshots.",
+  "packages": [
+    {
+      "architecture": "x64",
+      "version": "1.86.0",
+      "archive": "Bin\\Rust\\TrafficMonitor-Rust-1.86.0-x64-20261027-160446.zip",
+      "bytes": 1737047,
+      "sha256": "FFDD3BC3D08BF89E77B81FA55A0EB60644B1E46191EAB262312E1FD3FB4AB3D3",
+      "executable": "Bin\\Rust\\x64\\TrafficMonitor.exe",
+      "executable_sha256": "E8261EAAA0BB89D1DD0BC01B37668AB42DA1DF6B3895E55CB7250F70E0A37A8E",
+      "files": 151,
+      "skins": 15,
+      "languages": 18,
+      "third_party_packages": 18,
+      "workspace_tests": {
+        "failed": 0,
+        "default_ignored": 13,
+        "passed": 266
+      },
+      "startup_registry_migration_fixture": "passed",
+      "fmt": "passed",
+      "clippy_workspace_all_targets_deny_warnings": "passed",
+      "archive_round_trip_all_file_hashes": "passed",
+      "extracted_executable_sampling_and_history": "passed",
+      "build_log": "target/startup-final-x64.log",
+      "smoke_log": "target\\startup-package-20261027-160446\\smoke-x64.log"
+    },
+    {
+      "architecture": "x86",
+      "version": "1.86.0",
+      "archive": "Bin\\Rust\\TrafficMonitor-Rust-1.86.0-x86-20261027-160446.zip",
+      "bytes": 1697939,
+      "sha256": "E093CFF576F3DFA0B5EA041F1B54FB31A47AB2D232A11F7E8E632092C1BEC88D",
+      "executable": "Bin\\Rust\\x86\\TrafficMonitor.exe",
+      "executable_sha256": "F6DDD748920DE8326835151347DA16D1283C8524BC2775214431AA3513C1E94A",
+      "files": 151,
+      "skins": 15,
+      "languages": 18,
+      "third_party_packages": 18,
+      "workspace_tests": {
+        "failed": 0,
+        "default_ignored": 13,
+        "passed": 266
+      },
+      "startup_registry_migration_fixture": "passed",
+      "fmt": "passed",
+      "clippy_workspace_all_targets_deny_warnings": "passed",
+      "archive_round_trip_all_file_hashes": "passed",
+      "extracted_executable_sampling_and_history": "passed",
+      "build_log": "target/startup-final-x86.log",
+      "smoke_log": "target\\startup-package-20261027-160446\\smoke-x86.log"
+    }
+  ],
+  "regression_red_log": "target/startup-migration-red.log",
+  "regression_green_logs": [
+    "target/startup-migration-green-x64.log",
+    "target/startup-migration-green-x86.log"
+  ],
+  "arm64ec_workspace_all_targets_check": "passed",
+  "arm64ec_log": "target/startup-arm64ec-check.log",
+  "current_user_startup_repair": {
+    "backup": "target\\startup-repair\\TrafficMonitor-Run-20261027-160355-638.json",
+    "running_process_preserved": true,
+    "new_command": "\"<install-dir>\\TrafficMonitor.exe\"",
+    "real_logon_not_tested": true
+  },
+  "notes": [
+    "Default workspace suites and the isolated registry migration fixture were rerun on both architectures.",
+    "The live HKCU TrafficMonitor Run value was intentionally repaired after backup; all automated writes use private fixture keys.",
+    "Actual scheduled-task migration and user logon remain outside this verification; no real user scheduled tasks were modified."
+  ],
+  "record_scope": "Historical local validation snapshot; machine identifiers generalized for publication. Raw local logs and repair backups are excluded from Git.",
+  "publication_branch": "refactor/rust-migration-public"
+}

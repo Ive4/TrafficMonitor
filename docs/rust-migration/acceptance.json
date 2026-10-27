@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "follow_up_acceptance": "docs/rust-migration/settings-tabs-acceptance.json",
+  "verified_at_utc": "2026-10-27T05:24:13.5755721Z",
+  "branch": "refactor/rust-migration",
+  "head": "930f17533d6098989ebad62f210aa97d75ef174b",
+  "working_changes_committed": false,
+  "remote_ci_run": false,
+  "production_entry": "rust/traffic-monitor-native",
+  "cargo_default_members": [
+    "rust/traffic-monitor-native"
+  ],
+  "supported_systems": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "tested_desktop": "Current Windows 11, DPI 96 primary monitor",
+  "workspace_crates": 9,
+  "registry_dependency_packages": 18,
+  "legacy_inventory_units": 105,
+  "legacy_projects": 3,
+  "legacy_source_retained": true,
+  "feature_domains": [
+    {
+      "id": "RM-01",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-02",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-03",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-04",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-05",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-06",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-07",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-08",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-09",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-10",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-11",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-12",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-13",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-14",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-15",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-16",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-17",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-18",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-19",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-20",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-21",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-22",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-23",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-24",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-25",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-26",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    },
+    {
+      "id": "RM-27",
+      "implementation": "integrated",
+      "details": "docs/RUST_MIGRATION.md"
+    }
+  ],
+  "architectures": [
+    {
+      "architecture": "x64",
+      "target": "x86_64-pc-windows-msvc",
+      "workspace_tests": {
+        "passed": 254,
+        "failed": 0,
+        "default_ignored": 9,
+        "includes_doctest": true
+      },
+      "fmt": "passed",
+      "clippy_all_targets_deny_warnings": "passed",
+      "release_build": "passed",
+      "real_headless_sampling_and_history": "passed",
+      "explicit_owned_ui_tests": 3,
+      "native_release_six_panels_and_taskbar_text": "passed",
+      "original_cpp_plugin_through_rust_backend": "passed",
+      "rust_api_1_to_8_fixture": "passed",
+      "pe_no_required_mfc_or_core_dll": "passed",
+      "artifact": {
+        "architecture": "x64",
+        "target": "x86_64-pc-windows-msvc",
+        "version": "1.86.0",
+        "executable": "Bin\\Rust\\x64\\TrafficMonitor.exe",
+        "bytes": 1627136,
+        "sha256": "889F2E7B94D837931774228AB4ACAEE4280A1CF06C725BE1DB918A9570619F74",
+        "third_party_packages": 18
+      },
+      "logs": [
+        "target/final-release-x64.log",
+        "target/final-rust-desktop-x64.log",
+        "target/final-native-cpp-x64.log",
+        "target/final-imports-x64.log"
+      ],
+      "captures": "target/native-desktop-captures/x64-20261027-051732-778"
+    },
+    {
+      "architecture": "x86",
+      "target": "i686-pc-windows-msvc",
+      "workspace_tests": {
+        "passed": 254,
+        "failed": 0,
+        "default_ignored": 9,
+        "includes_doctest": true
+      },
+      "fmt": "passed",
+      "clippy_all_targets_deny_warnings": "passed",
+      "release_build": "passed",
+      "real_headless_sampling_and_history": "passed",
+      "explicit_owned_ui_tests": 3,
+      "native_release_six_panels_and_taskbar_text": "passed",
+      "original_cpp_plugin_through_rust_backend": "passed",
+      "rust_api_1_to_8_fixture": "passed",
+      "pe_no_required_mfc_or_core_dll": "passed",
+      "artifact": {
+        "architecture": "x86",
+        "target": "i686-pc-windows-msvc",
+        "version": "1.86.0",
+        "executable": "Bin\\Rust\\x86\\TrafficMonitor.exe",
+        "bytes": 1473024,
+        "sha256": "6DF800E98A6B6689DE94568B19CFB47B94CB69218BC42953C7AA7E3E053CF07D",
+        "third_party_packages": 18
+      },
+      "logs": [
+        "target/final-release-x86.log",
+        "target/final-rust-desktop-x86.log",
+        "target/final-native-cpp-x86.log",
+        "target/final-imports-x86.log"
+      ],
+      "captures": "target/native-desktop-captures/x86-20261027-051738-101"
+    }
+  ],
+  "arm64ec": {
+    "workspace_all_targets_check": "passed",
+    "link_and_device_runtime": "not verified",
+    "log": "target/final-arm64ec-check.log"
+  },
+  "external_acceptance_pending": [
+    "Windows 10 physical device and earliest supported build",
+    "ARM hardware linking and runtime",
+    "Physical multi-monitor mixed-DPI dragging and taskbar orientations/auto-hide combinations",
+    "Actual Explorer process restart; owned tests simulate TaskbarCreated",
+    "Real user logon with registry/task-scheduler startup; tests never changed user TrafficMonitor startup entries",
+    "CPU/GPU/disk/mainboard temperatures on hardware with an available trusted sensor provider",
+    "Long-duration suspend/resume and live device changes",
+    "Arbitrary third-party plugin and modal-settings interaction"
+  ],
+  "sensor_readings_on_this_machine": "No LHM/OHM/NVML provider; four temperatures correctly unavailable",
+  "known_retired_ui": [
+    "Win7/8 compatibility branches",
+    "Old .NET installation prompt; INI key retained",
+    "Internal last_light_mode is not a user setting"
+  ],
+  "notes": [
+    "Default ignored tests require explicit desktop, trusted fixtures or internet; their scopes are recorded separately.",
+    "Implementation, automated tests, current desktop observations and external acceptance are distinct.",
+    "Release packages include original resources/LICENSE plus dependency and available Rust standard-library notices."
+  ],
+  "record_scope": "Historical local validation snapshot; machine identifiers generalized for publication. Raw local logs and repair backups are excluded from Git.",
+  "publication_branch": "refactor/rust-migration-public"
+}
